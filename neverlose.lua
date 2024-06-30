@@ -77,7 +77,23 @@ function Neverlose_Main:PlaySound(SoundID)
     sound:Play()
 end
 
-local BuildInfo = loadstring(game:HttpGet"https://pastebin.com/raw/HzAeDGm4")()
+local BuildInfo = {}
+
+function BuildInfo:VersionType()
+    return '2.0.1'
+end
+
+function BuildInfo:GetBuild()
+    return 'Aug 28 2023'
+end
+
+function BuildInfo:BuildType()
+    return 'RELEASE'
+end
+
+function BuildInfo:GetNews()
+    return 'configs are encrypted now'
+end
 
 local function MakeDraggable(topbarobject, object)
     local Dragging = nil
